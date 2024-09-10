@@ -11,13 +11,40 @@
     */
 
     //ENTRADA
-    const tele = prompt(`Telefonou para a vitimia`) ;
-    const 
+    const tele = prompt(`Telefonou para a vitima?(Responda todas com sim ou não?)`) ;
+    const local = prompt(`Esteve no local do crime?`) ;
+    const mora = prompt(`Mora perto da vitima?`) ;
+    const devia = prompt(`Devia para vitima?`) ;
+    const trab = prompt(`Ja trabalhou com a vitima?`) ; 
+    let sim = 0 ; 
 
 
     //PROCESSAMENTO
+    if (tele == "sim") {
+        sim ++ 
+    } if (local == "sim") {
+        sim ++ 
+    } if (mora == "sim") {
+        sim ++ 
+    } if (devia == "sim") {
+        sim ++ 
+    } if (trab == "sim") {
+        sim ++ 
+    } 
 
-    
     //SAÍDA
+    if (sim == 5) {
+        alert('Você é o assasino!!')
+    } else if (sim == 3 || sim == 4) {
+        alert('você é cúmplice!')
+    } else if (sim == 2) {
+        alert('você é suspeito')
+    } else if (sim >= 0) {
+        alert('você é inocente :)')
+    } else {
+        alert('insira valores válidos')
+    }
+    //SAÍDA
+    console.log(telefone, local, moradia, devendo, trabalhou, somaRespostas)
 
 </script>

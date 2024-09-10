@@ -1,0 +1,42 @@
+<script>
+    /*
+    PROBLEMA: DESCONTO COMBUSTÍVEL
+    Um posto está vendendo combustíveis com a seguinte tabela de descontos:
+    Álcool:
+    - até 20 litros, desconto de 3% por litro
+    - acima de 20 litros, desconto de 5% por litro
+
+    Gasolina:
+    - até 20 litros, desconto de 4% por litro
+    - acima de 20 litros, desconto de 6% por litro
+    
+    Escreva um algoritmo que leia o número de litros vendidos, o tipo de combustível (codificado da seguinte forma: A-álcool, G-gasolina), calcule e imprima o valor a ser pago pelo cliente sabendo-se que o preço do litro da gasolina é R$ 6,50 o preço do litro do álcool é R$ 6,10.
+    */
+
+    //ENTRADA
+    const litros = Number(prompt(`Quantos litros você abasteceu?`)) ; 
+    const combusta = prompt(`Qual tipo de combusta você ultilizou? ( G-Gasolina ou (A)Alcool)`);
+    let gasosa = litros * 6.50;
+    let alcool = litros * 6.10;
+    let precoFinal;
+
+    //PROCESSAMENTO
+    if (litros <= 20 && combusta == "G") {
+        precoFinal = gasosa - (gasosa * 6 / 100)
+    } else if (litros > 20 && combusta == "G") {
+        precoFinal = gasosa - (gasosa * 4 / 100)
+    } else if (litros <= 20 && combusta == "A") {
+        precoFinal = alcool - (alcool * 5 / 100)
+    } else if (litros > 20 && combusta == "A") {
+        precoFinal = alcool - (alcool * 3 / 100)
+    } else {
+        alert('escreva valores válidos')
+    }
+
+    
+    //SAÍDA
+    console.log(gasosa)
+
+    document.write(`você deverá pagar R$${precoFinal.toFixed(2).replace(",",".")}`)
+
+</script>

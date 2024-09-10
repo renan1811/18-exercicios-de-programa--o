@@ -10,44 +10,44 @@
     //ENTRADA
     const numeroUm = Number(prompt(`informe um valor`));
     const numeroDois = Number(prompt(`informe outro valor`));
-    const operacao = Number(prompt(`qual operação você deseja realizar? (SO-soma, SU-subtração, D-divisão e M-mutiplicação`));
+    const operacao = prompt(`qual operação você deseja realizar? (SO-soma, SU-subtração, D-divisão e M-mutiplicação`);
 
     let soma = numeroUm + numeroDois ; 
     let subtracao = numeroUm - numeroDois ;
     let divisao = numeroUm / numeroDois ;
     let mutiplicacao = numeroUm * numeroDois ;
-    let imparPar ;
-    let positivoNegativo ;
+    let final;
     let inteiroDecimal ;
-    let final
+    let positivoNegativo
+    let imparPar ;
 
     //PROCESSAMENTO
-    if (operacao = "SO") {
+    if (operacao == "SO") {
         final = soma ;
-    } else if (operacao = "SU") {
+    } else if (operacao == "SU") {
         final = subtracao ;
-    } else if (operacao = "D") {
+    } else if (operacao == "D") {
         final = divisao ;
-    } else if (operacao = "M") {
+    } else if (operacao == "M") {
         final = mutiplicacao ;
     } else {
         alert(`escreva valores validos!`)
     }
     
     if (final % 2 == 0) {
-        imparPar = "Par" ;
+       let imparPar = "Par" ;
     } else { 
-        imparPar = "Impar" ;
+        let imparPar = "Impar" ;
     } 
-    if (final < 0) {
-        positivoNegativo = "Negativo" ;
+    if (final >= 0) {
+        let positivoNegativo = "Positivo" ;
     } else {
-        positivoNegativo = "Positivo" ;
+        let positivoNegativo = "Negativo" ;
     } 
     if (Number.isInteger(final)) {
-        inteiroDecimal = "Inteiro" ;
+        let inteiroDecimal = "Inteiro" ;
     } else { 
-        inteiroDecimal = "Decimal" ;
+        let inteiroDecimal = "Decimal" ;
     }
         
 
