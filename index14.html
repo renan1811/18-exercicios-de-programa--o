@@ -10,9 +10,23 @@
     */
 
     //ENTRADA
+    const peso = Number(prompt(`Quanto você pesa?`)) ;
+    const altura = Number(prompt(`Quanto você tem de altura?`)) ;
+    let imc = peso / altura ** 2
 
     
     //PROCESSAMENTO
+    if (imc <= 18.5) {
+        document.write(`Subpeso`) ;
+    } else if (imc <= 25.0) {
+        document.write(`Normal`) ;
+     } else if (imc <= 30.0) {
+        document.write(`Sobrepeso`)
+     } else if (imc > 30){
+        document.write(`Obeso`)
+     } else {
+        document.write(`coloque valores validos`)
+     }
 
     
     //SAÍDA
